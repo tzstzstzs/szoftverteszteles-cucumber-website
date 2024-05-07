@@ -4,7 +4,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class LinkNavigationSteps extends AbstractStepDefs {
 
@@ -17,6 +22,8 @@ public class LinkNavigationSteps extends AbstractStepDefs {
     public void i_click_on_the_link_with_xpath(String xpath) {
         WebElement link = driver.findElement(By.xpath(xpath));
         link.click();
+        acceptCookiesIfNeeded();
+        closeAdsIfNeeded();
     }
 
     @Then("I should be redirected to {string}")
