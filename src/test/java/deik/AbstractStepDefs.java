@@ -13,13 +13,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class AbstractStepDefs {
-    private static final int WAIT_TIME = 3;
+    private static final int WAIT_TIME = 5;
 
     protected static final WebDriver driver;
 
     protected static HomePage homePage;
 
-    protected static RegPage regPage;
+    protected static AccountInformationPage accountInformationPage;
 
     static {
 
@@ -30,24 +30,28 @@ public class AbstractStepDefs {
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WAIT_TIME));
         homePage = new HomePage(driver);
-        regPage = new RegPage(driver);
+        accountInformationPage = new AccountInformationPage(driver);
     }
 
     public void acceptCookiesIfNeeded() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         try {
-            WebElement acceptButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button.fc-button.fc-cta-consent.fc-primary-button")));
+            WebElement acceptButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[aria-label='Consent']")));
             acceptButton.click();
+/*            WebElement acceptButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button.fc-button.fc-cta-consent.fc-primary-button")));
+            acceptButton.click();
+            WebElement acceptButton2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("button.fc-button.fc-cta-consent.fc-primary-button")));
+            acceptButton2.click();*/
         } catch (TimeoutException e) {
             System.out.println("No cookies pop-up appeared.");
         }
     }
 
     public void closeAdsIfNeeded() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         try {
-            WebElement closeButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("dismiss-button")));
-            closeButton.click();
+            WebElement closeButton2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("dismiss-button"))); // #dismiss-button
+            closeButton2.click();
         } catch (TimeoutException e) {
             System.out.println("No ads pop-up appeared.");
         }
