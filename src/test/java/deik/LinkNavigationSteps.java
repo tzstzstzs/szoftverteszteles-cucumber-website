@@ -16,6 +16,8 @@ public class LinkNavigationSteps extends AbstractStepDefs {
     @Given("I am on the homepage of {string}")
     public void i_am_on_the_homepage_of(String url) {
         driver.get(url);
+        acceptCookiesIfNeeded();
+        closeAdsIfNeeded();
     }
 
     @When("I click on the link with xpath {string}")

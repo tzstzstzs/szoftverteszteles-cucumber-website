@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LoginCorrectSteps extends AbstractStepDefs{
+public class LoginCorrectSteps extends AbstractStepDefs {
 
     @Given("Homepage is opened")
     public void homepageIsOpened() {

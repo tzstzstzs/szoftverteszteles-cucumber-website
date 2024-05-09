@@ -29,3 +29,5 @@ Feature: User Registration and Deletion on Automation Exercise Site
     Examples:
       | Username  | E-mail          | Title   | Name         | Password | Day | Month | Year | FirstName   | LastName    | Address       | Country     | State       | City     | Zipcode | MobileNumber  | Message         |
       | user77    | user77@user.com | Mrs     | User77 Anna  | 123456   | 1   | 4     | 2000 | Anna        | User77      | P.O. Box 77   | Australia   | Queensland  | Brisbane | 12345   | 1234567890    | ACCOUNT CREATED |
+      | user87    | user87@user.com | Mr      | User87 Bela  | 123456   | 2   | 5     | 2001 | Bela        | User87      | P.O. Box 87   | Canada      | Quebek      | Quebek   | 12345   | 0000000000    | ACCOUNT CREATED |
+
