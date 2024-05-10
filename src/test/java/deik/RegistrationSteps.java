@@ -17,7 +17,7 @@ public class RegistrationSteps extends AbstractStepDefs {
     public void user_clicks_on_the_link_with_xpath(String xpath) {
         WebElement link = driver.findElement(By.xpath(xpath));
         link.click();
-        acceptCookiesIfNeeded();
+//        acceptCookiesIfNeeded();
     }
 
     @Then("{string} should be visible")
@@ -37,8 +37,8 @@ public class RegistrationSteps extends AbstractStepDefs {
     @And("Signup button is clicked")
     public void buttonIsClicked() {
         driver.findElement(By.xpath("//button[text()='Signup']")).click();
-        acceptCookiesIfNeeded();
-        closeAdsIfNeeded();
+//        acceptCookiesIfNeeded();
+//        closeAdsIfNeeded();
     }
 
     @Then("{string} should be displayed")
@@ -81,8 +81,8 @@ public class RegistrationSteps extends AbstractStepDefs {
     @And("Create Account button is clicked")
     public void createAccountButtonIsClicked() {
         driver.findElement(By.xpath("/html/body/section/div/div/div/div/form/button")).click();
-        acceptCookiesIfNeeded();
-        closeAdsIfNeeded();
+//        acceptCookiesIfNeeded();
+//        closeAdsIfNeeded();
     }
 
     @Then("{string} should be seen")
@@ -94,8 +94,8 @@ public class RegistrationSteps extends AbstractStepDefs {
     @When("Continue button is clicked")
     public void continueButtonIsClicked() {
         driver.findElement(By.xpath("/html/body/section/div/div/div/div/a")).click();
-        acceptCookiesIfNeeded();
-        closeAdsIfNeeded();
+//        acceptCookiesIfNeeded();
+//        closeAdsIfNeeded();
     }
 
     @Then("logged in as {string} label is seen")
@@ -107,8 +107,8 @@ public class RegistrationSteps extends AbstractStepDefs {
     @When("Delete button is clicked")
     public void deleteButtonIsClicked() {
         driver.findElement(By.xpath("/html/body/header/div/div/div/div[2]/div/ul/li[5]/a")).click();
-        acceptCookiesIfNeeded();
-        closeAdsIfNeeded();
+//        acceptCookiesIfNeeded();
+//        closeAdsIfNeeded();
     }
 
     @Then("Account deleted text should be seen")

@@ -24,8 +24,8 @@ public class LinkNavigationSteps extends AbstractStepDefs {
     public void i_click_on_the_link_with_xpath(String xpath) {
         WebElement link = driver.findElement(By.xpath(xpath));
         link.click();
-        acceptCookiesIfNeeded();
-        closeAdsIfNeeded();
+//        acceptCookiesIfNeeded();
+//        closeAdsIfNeeded();
     }
 
     @Then("I should be redirected to {string}")
