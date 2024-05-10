@@ -12,16 +12,16 @@ public class LoginIncorrectSteps extends AbstractStepDefs {
     @Given("Homepage is opened again")
     public void homepageIsOpenedAgain() {
         homePage.openPage();
-        acceptCookiesIfNeeded();
-        closeAdsIfNeeded();
+//        acceptCookiesIfNeeded();
+//        closeAdsIfNeeded();
     }
 
     @Given("Login link is clicked: {string}")
     public void loginLinkIsLinked(String arg0) {
         WebElement link = driver.findElement(By.xpath(arg0));
         link.click();
-        acceptCookiesIfNeeded();
-        closeAdsIfNeeded();
+//        acceptCookiesIfNeeded();
+//        closeAdsIfNeeded();
     }
 
     @Then("{string} text should displayed")

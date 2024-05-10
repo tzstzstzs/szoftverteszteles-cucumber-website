@@ -20,8 +20,8 @@ public class LoginCorrectSteps extends AbstractStepDefs {
     public void theUserClicksOnLoginLink(String arg0) {
         WebElement link = driver.findElement(By.xpath(arg0));
         link.click();
-        acceptCookiesIfNeeded();
-        closeAdsIfNeeded();
+//        acceptCookiesIfNeeded();
+//        closeAdsIfNeeded();
     }
 
     @Then("{string} text should be visible")
@@ -41,8 +41,8 @@ public class LoginCorrectSteps extends AbstractStepDefs {
     @And("Login button is clicked")
     public void loginButtonIsClicked() {
         driver.findElement(By.xpath("//button[text()='Login']")).click();
-        acceptCookiesIfNeeded();
-        closeAdsIfNeeded();
+//        acceptCookiesIfNeeded();
+//        closeAdsIfNeeded();
     }
 
     @Then("logged in as {string} is visible")
@@ -54,7 +54,7 @@ public class LoginCorrectSteps extends AbstractStepDefs {
     @Then("Logout link is clicked")
     public void logoutLinkIsClicked() {
         driver.findElement(By.xpath("/html/body/header/div/div/div/div[2]/div/ul/li[4]/a")).click();
-        acceptCookiesIfNeeded();
-        closeAdsIfNeeded();
+//        acceptCookiesIfNeeded();
+//        closeAdsIfNeeded();
     }
 }
