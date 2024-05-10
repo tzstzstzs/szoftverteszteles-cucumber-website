@@ -10,9 +10,9 @@ public class CommonStepDefs extends AbstractStepDefs {
         homePage.openPage();
     }
 
-    @AfterAll
+/*    @AfterAll
     public static void cleanUp() {
         homePage.closePage();
-    }
+    }*/
 
 }
