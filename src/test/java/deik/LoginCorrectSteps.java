@@ -30,8 +30,8 @@ public class LoginCorrectSteps extends AbstractStepDefs {
         assertEquals(loginText, loginLabel.getText());
     }
 
-    @When("correct {string} and {string} entered")
-    public void correctEmailAndPasswordEntered(String email, String password) {
+    @When("{string} and {string} entered")
+    public void emailAndPasswordEntered(String email, String password) {
         WebElement emailTextField = driver.findElement(By.cssSelector("input[data-qa='login-email']"));
         WebElement passwordTextField = driver.findElement(By.cssSelector("input[data-qa='login-password']"));
         emailTextField.sendKeys(email);
